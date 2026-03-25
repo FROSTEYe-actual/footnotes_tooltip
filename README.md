@@ -12,7 +12,7 @@ A lightweight, zero-dependency vanilla JS plugin that transforms standard WordPr
 - **Live Demo**: [https://frosteye.net/12427/](https://frosteye.net/12427/)
   - *Note: The demo page content is provided in **Korean**.*
 - **Documentation (Korean)**: 🚧 **Coming Soon**
-- *Detailed guide and setup instructions in Korean will be available shortly.*
+ - *Detailed guide and setup instructions in Korean will be available shortly.*
 
 ## ⚠️ Requirements & Environment
 
@@ -21,7 +21,7 @@ A lightweight, zero-dependency vanilla JS plugin that transforms standard WordPr
   - **PHP**: 8.3.30 (Compatible with 7.4+)
   - **Theme**: Optimized and tested with **Twenty Twenty-Five**.
 - **Browsers**: Modern browsers (Chrome, Safari, Edge, Firefox). **IE is not supported.**
-- - **Compatibility with Other Plugins**: Not tested. This plugin may conflict with other footnote-related plugins. It is highly recommended to **use only one plugin of this type at a time**.
+- **Compatibility with Other Plugins**: Not tested. This plugin may conflict with other footnote-related plugins. It is highly recommended to **use only one plugin of this type at a time**.
 
 ## ✨ Key Features
 
