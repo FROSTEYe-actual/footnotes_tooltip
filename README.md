@@ -21,6 +21,7 @@ A lightweight, zero-dependency vanilla JS plugin that transforms standard WordPr
   - **PHP**: 8.3.30 (Compatible with 7.4+)
   - **Theme**: Optimized and tested with **Twenty Twenty-Five**.
 - **Browsers**: Modern browsers (Chrome, Safari, Edge, Firefox). **IE is not supported.**
+- - **Compatibility with Other Plugins**: Not tested. This plugin may conflict with other footnote-related plugins. It is highly recommended to **use only one plugin of this type at a time**.
 
 ## ✨ Key Features
 
