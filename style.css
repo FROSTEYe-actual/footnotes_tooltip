@@ -1,0 +1,206 @@
+/**
+ * Footnotes Tooltip Styles
+ * * Organized by: 
+ * 1. Root Variables
+ * 2. Main Tooltip Container
+ * 3. Typography & Content Elements
+ * 4. Interactive Elements & Hover Effects
+ * 5. Tooltip Overlay
+ * 6. Responsive Design (Mobile/Desktop)
+ * 7. Footnote Superscript (Trigger Link) Styles
+ * 8. Footnotes within Captions
+ */
+
+/* 1. Root Variables - Define core spacing and sizing */
+:root {
+    --tooltip-padding: 16px;
+    --tooltip-border-radius: 12px;
+    --tooltip-max-width: 480px;
+    --tooltip-margin: 10px;
+    --tooltip-offset: 10px;
+}
+
+/* 2. Main Tooltip Container - Base styles and FOUC prevention */
+.footnote-tooltip-container {
+    /* Positioning & Display */
+    position: absolute;
+    z-index: 99999; /* Higher priority for visibility */
+    display: block;
+    box-sizing: border-box;
+
+    /* Box Model */
+    max-width: var(--tooltip-max-width);
+    padding: var(--tooltip-padding);
+    border-radius: var(--tooltip-border-radius);
+
+    /* Visibility & Interaction */
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    cursor: default;
+    touch-action: pan-y pinch-zoom;
+
+    /* Aesthetics (Glassmorphism) */
+    background: rgba(20, 20, 20, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+                inset 0 0 40px 12px rgba(0, 0, 0, 0.8);
+    
+    /* Backdrop Effects */
+    --webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+
+    /* Animation */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.footnote-tooltip-container.visible {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.footnote-tooltip-container:focus {
+    outline: none;
+}
+
+/* 3. Typography & Content Elements */
+.footnote-tooltip-container {
+    color: var(--wp--preset--color--accent-4, #eeeeee);
+    text-align: left;
+    text-shadow: 0 0 2px var(--wp--preset--color--base, #000000);
+    font-weight: 300;
+    font-size: var(--wp--preset--font-size--normal, 16px);
+}
+
+.footnote-tooltip-container a {
+    color: var(--wp--preset--color--accent-1, #3498db);
+}
+
+.footnote-tooltip-container li {
+    list-style: none !important;
+    margin: 0 !important;
+}
+
+/* 4. Interactive Elements & Hover Effects */
+@media (hover: hover) {
+    .footnote-tooltip-container a:hover {
+        color: var(--wp--preset--color--accent-2, #2980b9);
+    }
+    .footnote-tooltip-container .close-tooltip:hover {
+        color: var(--wp--preset--color--accent-1, #3498db);
+        background: rgba(200, 200, 200, 0.4);
+    }
+}
+
+.footnote-tooltip-container .close-tooltip {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    box-sizing: border-box;
+    color: var(--wp--preset--color--accent-4, #eeeeee);
+    text-shadow: 0 0 2px var(--wp--preset--color--base, #000000);
+    cursor: pointer;
+    background: rgba(100, 100, 100, 0.3);
+    border: 1px solid rgba(50, 50, 50, 0.4);
+    border-radius: 6px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(36, 36, 36, 0.5),
+                inset 0 -1px 0 rgba(36, 36, 36, 0.1),
+                inset 0 0 24px 12px rgba(36, 36, 36, 0.8);
+    --webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    transition: background 0.3s ease-in-out;
+}
+
+/* 5. Tooltip Overlay */
+.tooltip-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99980;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.2); 
+    --webkit-backdrop-filter: brightness(36%) blur(4px);
+    backdrop-filter: brightness(36%) blur(4px);
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.tooltip-overlay.visible {
+    visibility: visible;
+    opacity: 1;
+    touch-action: pinch-zoom;
+}
+
+/* 6. Responsive Design */
+@media (min-width: 769px) {
+    .footnote-tooltip-container {
+        font-size: calc(var(--wp--preset--font-size--normal, 16px) * 1.06);
+    }
+}
+
+@media (max-width: 768px) {
+    .footnote-tooltip-container {
+        position: fixed !important; 
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -56%) !important;
+        width: max-content !important;
+        max-width: 96vw !important;
+        max-height: 76vh !important;
+        margin: 0 !important;
+        overflow-y: auto !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+    }
+}
+
+/* 7. Footnote Superscript (Trigger Link) Styles */
+/* Enhanced selectors for better theme compatibility */
+sup.fn, 
+.entry-content sup.fn, 
+.post-content sup.fn, 
+.type-post sup.fn {
+    position: relative !important;
+    top: -0.4em !important;
+    vertical-align: baseline !important;
+    line-height: 0 !important;
+}
+
+/* Badge styling with robust fallbacks */
+sup.fn a,
+.entry-content sup.fn a,
+.post-content sup.fn a,
+.type-post sup.fn a {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 1rem;
+    height: 1rem;
+    padding: 0 1px 1px 0;
+    border-radius: 10px;
+    font-size: 0.68rem !important;
+    font-weight: 800 !important;
+    font-style: normal !important;
+    text-decoration: none !important;
+    background-color: var(--wp--preset--color--accent-1, #3498db);
+    color: var(--wp--preset--color--base, #ffffff);
+    transition: all 0.2s ease;
+}
+
+sup.fn a:hover {
+    background-color: var(--wp--preset--color--accent-2, #2980b9);
+}
+
+/* 8. Footnotes within Captions */
+.wp-element-caption sup.fn a,
+.entry-content figure .wp-element-caption sup.fn a {
+    height: 0.9rem !important;
+    font-size: 0.65rem !important;
+}
