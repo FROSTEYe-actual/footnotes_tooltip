@@ -12,7 +12,7 @@ A lightweight, zero-dependency vanilla JS plugin that transforms standard WordPr
 - **Live Demo**: [https://frosteye.net/12427/](https://frosteye.net/12427/)
   - *Note: The demo page content is provided in **Korean**.*
 - **Documentation (Korean)**: 🚧 **Coming Soon**
-  - *Detailed guide and setup instructions in Korean will be available shortly.*
+- *Detailed guide and setup instructions in Korean will be available shortly.*
 
 ## ⚠️ Requirements & Environment
 
