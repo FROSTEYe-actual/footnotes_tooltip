@@ -50,7 +50,7 @@ A lightweight, zero-dependency vanilla JS plugin that transforms standard WordPr
 - **Project Status**: This project is considered **feature-complete** and is provided "as is." Active maintenance, regular updates, or bug fixes are not planned at this time.
 - **Forking**: You are more than welcome to **Fork** this repository if you wish to modify, improve, or customize the code for your own needs. 
 - **Pull Requests**: Due to limited time and commitments to other projects, **Pull Requests will not be reviewed or merged.** Please maintain your own versions through Forking.
-- - **Issues**: If you find a bug, you may open an [Issue](https://github.com/FROSTEYe-actual/footnotes_tooltip/issues) for others to see, but please note that a response or fix from the author is not guaranteed.
+- **Issues**: If you find a bug, you may open an [Issue](https://github.com/FROSTEYe-actual/footnotes_tooltip/issues) for others to see, but please note that a response or fix from the author is not guaranteed.
 
 ## 📜 Changelog
 
