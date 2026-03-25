@@ -58,7 +58,7 @@ A lightweight, zero-dependency vanilla JS plugin that transforms standard WordPr
 - **Pull Requests**: Due to limited time and commitments to other projects, **Pull Requests will not be reviewed or merged.** Please maintain your own versions through Forking.
 - **Issues**: If you find a bug, you may open an [Issue](https://github.com/FROSTEYe-actual/footnotes_tooltip/issues) for others to see, but please note that a response or fix from the author is not guaranteed.
 
-## 💖 Support & Sponsorship
+## 💖 Donation
 
 This plugin and all its resources are provided entirely free of charge. However, maintaining a high-quality, ad-free experience involves consistent operational costs, including server hardware, electricity, domain fees, and infrastructure maintenance.
 
