@@ -12,7 +12,7 @@ A lightweight, zero-dependency vanilla JS plugin that transforms standard WordPr
 - **Live Demo**: [https://frosteye.net/12427/](https://frosteye.net/12427/)
   - *Note: The demo page content is provided in **Korean**.*
 - **Documentation (Korean)**: 🚧 **Coming Soon**
-  - *Detailed guide and setup instructions in Korean will be available shortly.*
+  - *Detailed guides and setup instructions in Korean will be available shortly.*
 
 ## ⚠️ Requirements & Environment
 
@@ -36,9 +36,15 @@ A lightweight, zero-dependency vanilla JS plugin that transforms standard WordPr
 ## 🚀 Installation
 
 1. Download the latest repository as a `.zip` file or grab a version from the **[Releases](https://github.com/FROSTEYe-actual/footnotes_tooltip/releases/)** section.
-2. Go to your **WordPress Admin > Plugins > Add Plugin > Upload Plugin**.
+2. Go to your **WordPress Admin > Plugins > Add New Plugin > Upload Plugin**.
 3. Select the downloaded `.zip` file and click **Install Now**.
 4. **Activate** the plugin.
+
+## ⚙️ Uninstallation
+
+1. Go to your **WordPress Admin > Plugins > Installed Plugins**.
+2. **Deactivate** the plugin and then **Delete** it.
+3. This plugin is completely clean; it does not store any data (such as database tables or metadata) on your server or database. **Simply deleting the plugin is all you need for a full uninstallation.**
 
 ## 📖 Usage
 
