@@ -1,2 +1,62 @@
-# footnotes_tooltip
+# 📝 Footnotes Tooltip for WordPress
+
 A lightweight, zero-dependency vanilla JS plugin that transforms standard WordPress footnotes into elegant, interactive tooltips.
+
+## 🎯 Goals & Intent
+
+- **Seamless Reading Experience**: The primary goal is to allow readers to access footnote content instantly without jumping to the bottom of the page, ensuring a natural and uninterrupted reading flow.
+- **Minimalist & Pure**: This plugin was developed to avoid heavy dependencies (like jQuery) or complex code bundles, providing a high-performance solution with clean, native JavaScript and CSS.
+
+## 🔗 Demo & Docs
+
+- **Live Demo**: [https://frosteye.net/12427/](https://frosteye.net/12427/)
+  - *Note: The demo page content is provided in **Korean**.*
+- **Documentation (Korean)**: 🚧 **Coming Soon**
+  - *Detailed guide and setup instructions in Korean will be available shortly.*
+
+## ⚠️ Requirements & Environment
+
+- **Tested Environment**:
+  - **WordPress**: 6.4.3 (Compatible with 6.1+)
+  - **PHP**: 8.3.30 (Compatible with 7.4+)
+  - **Theme**: Optimized and tested with **Twenty Twenty-Five**.
+- **Browsers**: Modern browsers (Chrome, Safari, Edge, Firefox). **IE is not supported.**
+
+## ✨ Key Features
+
+- **Security & Privacy**: Designed with security in mind. It uses standard DOM APIs and does not collect any user data or require external API calls.
+- **Blog Optimized**: Specially designed for content-heavy blogs to provide a seamless reading experience without annoying page jumps.
+- **Dark Mode Optimized**: Features a modern Glassmorphism UI (blur & transparency) designed specifically for dark themes.
+- **Mobile Optimized**: Responsive modal-style layout for mobile devices with multi-touch pinch-zoom support.
+- **Accessible**: Full keyboard navigation support (Focus trapping & Escape to close).
+- **Performance**: Smart asset loading (only on pages with footnotes) and AJAX/PJAX compatible.
+- **Smart Positioning**: Automatic flip (top/bottom) based on available viewport space.
+
+## 🚀 Installation
+
+1. Download the latest repository as a `.zip` file or grab a version from the **Releases** section.
+2. Go to your **WordPress Admin > Plugins > Add Plugin > Upload Plugin**.
+3. Select the downloaded `.zip` file and click **Install Now**.
+4. **Activate** the plugin.
+
+## 📖 Usage
+
+- Works automatically with the standard **WordPress Footnotes block** or any `<sup>` tags containing internal links. **No extra configuration required.**
+- Most design elements are **separated** into the `style.css` file, allowing you to easily **fine-tune** the look to match your specific WordPress site.
+
+## 🤝 Contributing & Support
+
+- **Project Status**: This project is considered **feature-complete** and is provided "as is." Active maintenance, regular updates, or bug fixes are not planned at this time.
+- **Forking**: You are more than welcome to **Fork** this repository if you wish to modify, improve, or customize the code for your own needs. 
+- **Pull Requests**: Due to limited time and commitments to other projects, **Pull Requests will not be reviewed or merged.** Please maintain your own versions through Forking.
+
+## 📜 Changelog
+
+- **v1.0.0**: Initial Release. Features glassmorphism UI, mobile support, and full accessibility.
+
+## 📄 License
+
+Distributed under the **MIT License**. See the [LICENSE](LICENSE) file for more information.
+
+---
+Developed by [FROSTEYe](https://frosteye.net/)
