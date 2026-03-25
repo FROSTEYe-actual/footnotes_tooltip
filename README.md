@@ -34,7 +34,7 @@ A lightweight, zero-dependency vanilla JS plugin that transforms standard WordPr
 
 ## 🚀 Installation
 
-1. Download the latest repository as a `.zip` file or grab a version from the **[Releases](https://github.com/FROSTEYe-actual/footnotes_tooltip/releases/tag/v1.0.0)** section.
+1. Download the latest repository as a `.zip` file or grab a version from the **[Releases](https://github.com/FROSTEYe-actual/footnotes_tooltip/releases/)** section.
 2. Go to your **WordPress Admin > Plugins > Add Plugin > Upload Plugin**.
 3. Select the downloaded `.zip` file and click **Install Now**.
 4. **Activate** the plugin.
