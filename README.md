@@ -58,6 +58,16 @@ A lightweight, zero-dependency vanilla JS plugin that transforms standard WordPr
 - **Pull Requests**: Due to limited time and commitments to other projects, **Pull Requests will not be reviewed or merged.** Please maintain your own versions through Forking.
 - **Issues**: If you find a bug, you may open an [Issue](https://github.com/FROSTEYe-actual/footnotes_tooltip/issues) for others to see, but please note that a response or fix from the author is not guaranteed.
 
+## 💖 Support & Sponsorship
+
+This plugin and all its resources are provided entirely free of charge. However, maintaining a high-quality, ad-free experience involves consistent operational costs, including server hardware, electricity, domain fees, and infrastructure maintenance.
+
+Currently, small revenues from ads and affiliate links on my blog help, but the project fundamentally operates at a loss. Your support, no matter the size, provides the vital resources needed to keep this project running and to continue developing helpful WordPress plugins. Thank you for being a part of this journey.
+
+- **[Official Donation Page](https://frosteye.net/donation/)**
+
+*Your kindness is the greatest motivation for independent open-source development.*
+
 ## 📜 Changelog
 
 - **v1.0.0**: Initial Release. Features glassmorphism UI, mobile support, and full accessibility.
