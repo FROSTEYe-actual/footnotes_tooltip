@@ -86,7 +86,6 @@
         }
 
         function cleanupTooltipContent() {
-            // [Added] Re-check visibility to prevent accidental deletion during rapid interaction
             if (tooltip.classList.contains('visible')) return;
             while (tooltip.firstChild) {
                 tooltip.removeChild(tooltip.firstChild);
@@ -119,7 +118,6 @@
                     return;
                 }
 
-                // [Added] Ensure container is empty before appending new content
                 while (tooltip.firstChild) tooltip.removeChild(tooltip.firstChild);
 
                 const clone = source.cloneNode(true);
@@ -134,7 +132,7 @@
                 closeBtn.className = CLOSE_BUTTON_CLASS;
                 closeBtn.textContent = 'Close';
                 closeBtn.setAttribute('aria-label', 'Close tooltip');
-                closeBtn.onclick = (e) => { e.stopPropagation(); hideTooltip(); }; // [Fixed] Stop propagation
+                closeBtn.onclick = (e) => { e.stopPropagation(); hideTooltip(); };
                 tooltip.appendChild(closeBtn);
 
                 currentActiveLink = linkElement;
