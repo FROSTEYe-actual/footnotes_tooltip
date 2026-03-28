@@ -2,14 +2,16 @@
     'use strict';
 
     function initFootnotesTooltip() {
+        // Prevent multiple initializations
         if (document.querySelector('.footnote-tooltip-container')) return null;
 
         const TOOLTIP_CONTAINER_CLASS = 'footnote-tooltip-container';
         const FOOTNOTE_LINK_SELECTOR = '.wp-block-footnotes a, sup.wp-block-footnote a, a[href^="#"]';
         const CLOSE_BUTTON_CLASS = 'close-tooltip';
         const OVERLAY_CLASS = 'tooltip-overlay';
-        const ID_PREFIX = 'tt-';
+        const ID_PREFIX = 'tt-'; // Prefix to avoid ID collisions in the tooltip
 
+        // Create UI elements: Tooltip container and background overlay
         const tooltip = document.createElement('div');
         tooltip.className = TOOLTIP_CONTAINER_CLASS;
         tooltip.setAttribute('role', 'dialog');
@@ -25,12 +27,14 @@
         let currentActiveLink = null;
         let rafId = null;
 
+        // Helper to fetch custom CSS variable values
         function getCssValue(variable, defaultValue) {
             const style = getComputedStyle(tooltip);
             const value = style.getPropertyValue(variable).trim() || defaultValue;
             return parseInt(value, 10);
         }
 
+        // Transform IDs and internal links to prevent conflicts within the tooltip
         function transformIdsAndLinks(element) {
             if (!element) return;
             if (element.id) element.id = ID_PREFIX + element.id;
@@ -47,6 +51,7 @@
             });
         }
 
+        // Calculate and apply tooltip position (Desktop: smart flip / Mobile: centered modal)
         function positionTooltip(linkElement) {
             if (mobileQuery.matches || !linkElement) {
                 tooltip.style.top = '';
@@ -63,10 +68,12 @@
             let top = linkRect.top + window.scrollY - tooltipRect.height - offset;
             let left = linkRect.left + window.scrollX + (linkRect.width / 2) - (tooltipRect.width / 2);
 
+            // Flip to bottom if there is not enough space on top
             if (top < window.scrollY + margin) {
                 top = linkRect.bottom + window.scrollY + offset;
             }
 
+            // Constrain tooltip within the viewport width
             const minLeft = window.scrollX + margin;
             const maxLeft = window.innerWidth + window.scrollX - tooltipRect.width - margin;
             left = Math.max(minLeft, Math.min(left, maxLeft));
@@ -112,6 +119,7 @@
 
             const source = document.getElementById(targetId);
 
+            // Validate if the target is a valid footnote element
             if (source && (source.closest('.wp-block-footnotes') || linkElement.closest('sup'))) {
                 if (tooltip.classList.contains('visible') && currentActiveLink === linkElement) {
                     hideTooltip();
@@ -123,11 +131,20 @@
                 const clone = source.cloneNode(true);
                 transformIdsAndLinks(clone);
 
-                const backRefs = clone.querySelectorAll('.footnote-backref, .footnote-return, a[href*="-link"], a[href^="#fnref"]');
+                // Sanitize: Remove back-references (return arrows) to avoid UI clutter
+                const backRefs = clone.querySelectorAll('.footnote-backref, .footnote-return, a[href^="#fnref"]');
                 backRefs.forEach(ref => ref.remove());
+
+                // Additional check to filter out links containing return arrow symbols
+                clone.querySelectorAll('a').forEach(link => {
+                    if (link.textContent.includes('↩') || link.textContent.includes('↩︎')) {
+                        link.remove();
+                    }
+                });
 
                 tooltip.appendChild(clone);
                 
+                // Add explicit close button for accessibility
                 const closeBtn = document.createElement('button');
                 closeBtn.className = CLOSE_BUTTON_CLASS;
                 closeBtn.textContent = 'Close';
@@ -146,6 +163,7 @@
             }
         }
 
+        // Prevent background scrolling on touch devices when overlay is active
         overlay.addEventListener('touchmove', (e) => {
             if (e.touches.length < 2) e.preventDefault();
         }, { passive: false });
@@ -154,6 +172,7 @@
             const link = e.target.closest(FOOTNOTE_LINK_SELECTOR);
             const closeBtn = e.target.closest(`.${CLOSE_BUTTON_CLASS}`);
 
+            // Allow clicking links inside the tooltip content
             if (tooltip.contains(e.target) && e.target.tagName === 'A' && !closeBtn) return; 
 
             if (closeBtn) {
@@ -166,10 +185,11 @@
                     showTooltip(link);
                 }
             } else if (!tooltip.contains(e.target)) {
-                hideTooltip();
+                hideTooltip(); // Close if clicking outside the tooltip
             }
         };
 
+        // Accessibility: Keyboard navigation support (Esc and Focus Trapping)
         const handleKeydown = (e) => {
             if (!tooltip.classList.contains('visible')) return;
             if (e.key === 'Escape') hideTooltip();
@@ -190,6 +210,7 @@
         window.addEventListener('scroll', updateTooltipPosition, { passive: true });
         window.addEventListener('resize', updateTooltipPosition, { passive: true });
 
+        // Returns cleanup function to prevent memory leaks and duplicate observers
         return function cleanup() {
             document.removeEventListener('click', handleClick);
             document.removeEventListener('keydown', handleKeydown);
@@ -203,6 +224,7 @@
 
     let cleanup = initFootnotesTooltip();
 
+    // Re-initialize for AJAX/SPA page transitions or dynamic content updates
     const observer = new MutationObserver(() => {
         if (!document.querySelector('.footnote-tooltip-container')) {
             if (typeof cleanup === 'function') cleanup();
