@@ -70,6 +70,9 @@ Currently, small revenues from ads and affiliate links on my blog help, but the 
 
 ## 📜 Changelog
 
+- **v1.0.1**: Minor bug fix.
+  - Resolved a bug that stripped cross-reference links when displaying footnote content in the tooltip.
+  - Enhanced code readability by adding detailed comments to `javascript.js`.
 - **v1.0.0**: Initial Release. Features glassmorphism UI, mobile support, and full accessibility.
 
 ## 📄 License
