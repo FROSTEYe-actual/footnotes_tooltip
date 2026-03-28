@@ -2,7 +2,7 @@
 /*
 Plugin Name: Footnotes Tooltip
 Description: Transforms standard WordPress footnotes into elegant, interactive tooltips.
-Version: 1.0
+Version: 1.0.1
 Author: FROSTEYe
 Author URI: https://frosteye.net/
 Text Domain: footnotes-tooltip
