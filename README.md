@@ -1,6 +1,6 @@
 # 📝 Footnotes Tooltip for WordPress
 ![Version](https://img.shields.io/badge/version-1.0.2-blue?style=flat-square)
-![WordPress](https://img.shields.io/badge/WordPress-6.4.3-0073AA?style=flat-square&logo=wordpress)
+![WordPress](https://img.shields.io/badge/WordPress-6.4.4-0073AA?style=flat-square&logo=wordpress)
 ![PHP](https://img.shields.io/badge/PHP-8.3.30-777BB4?style=flat-square&logo=php)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
@@ -31,7 +31,7 @@ A lightweight, zero-dependency vanilla JS plugin that transforms standard WordPr
 ## ⚠️ Requirements & Environment
 
 - **Tested Environment**:
-  - **WordPress**: 6.4.3 (Compatible with 6.1+)
+  - **WordPress**: 6.4.4 (Compatible with 6.1+)
   - **PHP**: 8.3.30 (Compatible with 7.4+)
   - **Theme**: Optimized and tested with **Twenty Twenty-Five**.
 - **Browsers**: Modern browsers (Chrome, Safari, Edge, Firefox). **IE is not supported.**
@@ -42,7 +42,7 @@ A lightweight, zero-dependency vanilla JS plugin that transforms standard WordPr
 - **Security & Privacy**: Designed with security in mind. It uses standard DOM APIs and does not collect any user data or require external API calls.
 - **Blog Optimized**: Specially designed for content-heavy blogs to provide a seamless reading experience without annoying page jumps.
 - **Dark Mode Optimized**: Features a modern Glassmorphism UI (blur & transparency) designed specifically for dark themes.
-- **Mobile Optimized**: Responsive modal-style layout for mobile devices with multi-touch pinch-zoom support.
+- **Mobile Optimized**: Responsive modal-style layout for mobile devices with multi-touch pinch-to-zoom support.
 - **Accessible**: Full keyboard navigation support (Focus trapping & Escape to close).
 - **Performance**: Smart asset loading (only on pages with footnotes) and AJAX/PJAX compatible.
 - **Smart Positioning**: Automatic flip (top/bottom) based on available viewport space.
@@ -76,7 +76,7 @@ A lightweight, zero-dependency vanilla JS plugin that transforms standard WordPr
 
 This plugin and all its resources are provided entirely free of charge. However, maintaining a high-quality, ad-free experience involves consistent operational costs, including server hardware, electricity, domain fees, and infrastructure maintenance.
 
-Currently, small revenues from ads and affiliate links on my blog help, but the project fundamentally operates at a loss. Your support, no matter the size, provides the vital resources needed to keep this project running and to continue developing helpful WordPress plugins. Thank you for being a part of this journey.
+Currently, small revenue from ads and affiliate links on my blog help, but the project fundamentally operates at a loss. Your support, no matter the size, provides the vital resources needed to keep this project running and to continue developing helpful WordPress plugins. Thank you for being a part of this journey.
 
 - **[Official Donation Page](https://frosteye.net/donation/)**
 
@@ -84,7 +84,7 @@ Currently, small revenues from ads and affiliate links on my blog help, but the 
 
 ## 📜 Changelog
 
-- **v1.0.2**: Adeed a scrennshot
+- **v1.0.2**: Added a screenshot
 - **v1.0.1**: Minor bug fix.
   - Resolved a bug that stripped cross-reference links when displaying footnote content in the tooltip.
   - Enhanced code readability by adding detailed comments to `javascript.js`.
@@ -94,7 +94,7 @@ Currently, small revenues from ads and affiliate links on my blog help, but the 
 
 This is a **personal project**, and while it is currently feature-complete for its primary purpose, I have the following milestones planned for the long-term roadmap:
 
-- **Official WordPress.org Hosting**: My current focus is preparing the plugin for submission to the [Official WordPress Plugin Directory](https://wordpress.org/plugins/) to provide seamless updates and wider accessibility.
+- **Official WordPress.org Hosting**: My current focus is preparing the plugin for submission to the [official WordPress Plugin Directory](https://wordpress.org/plugins/) to provide seamless updates and wider accessibility.
 - **Basic Settings Page**: In the distant future, I may consider adding a simple settings page in the WordPress admin dashboard for UI customization. **Please note that this is currently a low priority.**
 
 > **Note**: These updates are part of my personal long-term vision. There is no fixed release date, as the transition to the official directory is the main priority at this stage.
