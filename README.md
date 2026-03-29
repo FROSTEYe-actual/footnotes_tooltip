@@ -1,4 +1,8 @@
 # 📝 Footnotes Tooltip for WordPress
+![Version](https://img.shields.io/badge/version-1.0.2-blue?style=flat-square)
+![WordPress](https://img.shields.io/badge/WordPress-6.4.3-0073AA?style=flat-square&logo=wordpress)
+![PHP](https://img.shields.io/badge/PHP-8.3.30-777BB4?style=flat-square&logo=php)
+![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
 A lightweight, zero-dependency vanilla JS plugin that transforms standard WordPress footnotes into elegant, interactive tooltips.
 
@@ -13,6 +17,16 @@ A lightweight, zero-dependency vanilla JS plugin that transforms standard WordPr
   - *Note: The demo page content is provided in **Korean**.*
 - **Documentation (Korean)**: 🚧 **Coming Soon**
   - *Detailed guides and setup instructions in Korean will be available shortly.*
+
+## 📷 Preview
+
+<p align="center">
+  <img src="./images/footnotes_tooltip_screenshot.jpg" width="800" alt="WordPress Footnotes Tooltip Screenshot">
+  <br>
+  <em>The elegant glassmorphism tooltip in action.</em>
+</p>
+
+---
 
 ## ⚠️ Requirements & Environment
 
@@ -70,10 +84,20 @@ Currently, small revenues from ads and affiliate links on my blog help, but the 
 
 ## 📜 Changelog
 
+- **v1.0.2**: Adeed a scrennshot
 - **v1.0.1**: Minor bug fix.
   - Resolved a bug that stripped cross-reference links when displaying footnote content in the tooltip.
   - Enhanced code readability by adding detailed comments to `javascript.js`.
 - **v1.0.0**: Initial Release. Features glassmorphism UI, mobile support, and full accessibility.
+
+## 🔮 Future Updates & Roadmap
+
+This is a **personal project**, and while it is currently feature-complete for its primary purpose, I have the following milestones planned for the long-term roadmap:
+
+- **Official WordPress.org Hosting**: My current focus is preparing the plugin for submission to the [Official WordPress Plugin Directory](https://wordpress.org/plugins/) to provide seamless updates and wider accessibility.
+- **Basic Settings Page**: In the distant future, I may consider adding a simple settings page in the WordPress admin dashboard for UI customization. **Please note that this is currently a low priority.**
+
+> **Note**: These updates are part of my personal long-term vision. There is no fixed release date, as the transition to the official directory is the main priority at this stage.
 
 ## 📄 License
 
