@@ -2,7 +2,7 @@
 /*
 Plugin Name: Footnotes Tooltip
 Description: Transforms standard WordPress footnotes into elegant, interactive tooltips.
-Version: 1.0.1
+Version: 1.0.2
 Author: FROSTEYe
 Author URI: https://frosteye.net/
 Text Domain: footnotes-tooltip
@@ -78,8 +78,8 @@ function footnotes_tooltip_enqueue_scripts() {
     $plugin_url  = plugin_dir_url( __FILE__ );
 
     // Versioning based on file modification time to prevent browser caching issues.
-    $css_ver = file_exists( $plugin_path . 'style.css' ) ? filemtime( $plugin_path . 'style.css' ) : '1.0.0';
-    $js_ver  = file_exists( $plugin_path . 'javascript.js' ) ? filemtime( $plugin_path . 'javascript.js' ) : '1.0.0';
+    $css_ver = file_exists( $plugin_path . 'style.css' ) ? filemtime( $plugin_path . 'style.css' ) : '1.0.2';
+    $js_ver  = file_exists( $plugin_path . 'javascript.js' ) ? filemtime( $plugin_path . 'javascript.js' ) : '1.0.2';
 
     // Enqueue Stylesheet.
     wp_enqueue_style(
