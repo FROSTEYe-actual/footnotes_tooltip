@@ -11,12 +11,10 @@ A lightweight, zero-dependency vanilla JS plugin that transforms standard WordPr
 - **Seamless Reading Experience**: The primary goal is to allow readers to access footnote content instantly without jumping to the bottom of the page, ensuring a natural and uninterrupted reading flow.
 - **Minimalist & Pure**: This plugin was developed to avoid heavy dependencies (like jQuery) or complex code bundles, providing a high-performance solution with clean, native JavaScript and CSS.
 
-## 🔗 Demo & Docs
+## 🔗 Demo & Explanation
 
-- **Live Demo**: [https://frosteye.net/12427/](https://frosteye.net/12427/)
-  - *Note: The demo page content is provided in **Korean**.*
-- **Documentation (Korean)**: 🚧 **Coming Soon**
-  - *Detailed guides and setup instructions in Korean will be available shortly.*
+- **Live Demo (Korean)**: [https://frosteye.net/12427/](https://frosteye.net/12427/)
+- **Explanation (Korean)**: [https://frosteye.net/13050/](https://frosteye.net/13050/)
 
 ## 📷 Preview
 
