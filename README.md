@@ -1,6 +1,6 @@
 # 📝 Footnotes Tooltip for WordPress
 ![Version](https://img.shields.io/badge/version-1.0.2-blue?style=flat-square)
-![WordPress](https://img.shields.io/badge/WordPress-6.4.4-0073AA?style=flat-square&logo=wordpress)
+![WordPress](https://img.shields.io/badge/WordPress-6.9.4-0073AA?style=flat-square&logo=wordpress)
 ![PHP](https://img.shields.io/badge/PHP-8.3.30-777BB4?style=flat-square&logo=php)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
